@@ -11,7 +11,12 @@ class DataCollection {
   }
 
   get(id) {
-    return this.model.findOne({ where: { id } });
+    if (id) {
+      return this.model.findOne({ where: { id }});
+    }
+    else {
+      return this.model.findAll({});
+    }
   }
 
   create(record) {
@@ -24,7 +29,7 @@ class DataCollection {
   }
 
   delete(id) {
-    return this.model.destroy({ where: { id } });
+    return this.model.destroy({ where: { id }});
   }
 
 }

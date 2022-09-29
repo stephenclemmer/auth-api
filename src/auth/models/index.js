@@ -1,6 +1,6 @@
 'use strict';
 
-const clothesModel = require('../../../auth-server/src/auth/models/clothes/model.js');
+const clothesModel = require('./clothes/model');
 const foodModel = require('./food/model.js');
 const Collection = require('./data-collection.js');
 const userModel = require('./users.js');

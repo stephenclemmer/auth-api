@@ -8,7 +8,7 @@ const morgan = require('morgan');
 // Esoteric Resources
 const notFoundHandler = require('./error-handlers/404.js');
 const errorHandler = require('./error-handlers/500.js');
-const v1Routes = require('./auth/route/v1.js.js');
+const v1Routes = require('./auth/route/v1.js');
 const v2Routes = require('./auth/routes.js');
 const logger = require('./auth/middleware/logger');
 
