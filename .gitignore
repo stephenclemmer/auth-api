@@ -4,6 +4,11 @@ db
 temp
 build
 memory
+data
+*.crt
+*.key
+*.env
+package-lock.json
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
@@ -118,6 +123,7 @@ Temporary Items
 Session.vim
 # temporary
 .netrwhist
+*~
 # auto-generated tag files
 tags
 
@@ -143,3 +149,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/vim,osx,node,linux,windows
+node_modules
