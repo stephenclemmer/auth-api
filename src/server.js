@@ -9,7 +9,8 @@ const morgan = require('morgan');
 const notFoundHandler = require('./error-handlers/404.js');
 const errorHandler = require('./error-handlers/500.js');
 const v1Routes = require('./auth/route/v1.js');
-const v2Routes = require('./auth/routes.js');
+const v2Routes = require('./auth/route/v2.js');
+const authRoutes = require('./auth/routes.js');
 const logger = require('./auth/middleware/logger');
 
 // Prepare the express app
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 
 // Routes
+app.use(authRoutes);
 app.use('/api/v1', v1Routes);
 app.use('/api/v2', v2Routes);
 
